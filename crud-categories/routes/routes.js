@@ -7,7 +7,7 @@ VarRoute.use(express.urlencoded({extended:false}))
 //Registrar Empleado
 const CtrlRegistrar = require("../controller/RegistrarController");
 
-VarRoute.post('/employee/Registrar',(req,res)=>{
+VarRoute.post('/categorie/Registrar',(req,res)=>{
     CtrlRegistrar.ControllerRegistrar(req,res);
 }
 )
@@ -17,7 +17,7 @@ VarRoute.post('/employee/Registrar',(req,res)=>{
 const CtrlGetAll = require("../controller/GetAllController");
 
 
-VarRoute.get('/employee/GetAll',(req,res)=>{
+VarRoute.get('/categorie/GetAll',(req,res)=>{
     CtrlGetAll.ControllerListarTodo(req,res);
 }
 )
@@ -26,7 +26,7 @@ VarRoute.get('/employee/GetAll',(req,res)=>{
 
 const CtrlEliminar = require("../controller/EliminarController");
 
-VarRoute.post('/employee/Eliminar',(req,res)=>{
+VarRoute.post('/categorie/Eliminar',(req,res)=>{
     CtrlEliminar.ControllerEliminar(req,res);
 }
 )
@@ -36,7 +36,7 @@ VarRoute.post('/employee/Eliminar',(req,res)=>{
 const CtrlActualizar = require("../controller/ActualizarController");
 
 
-VarRoute.post('/employee/Actualizar',(req,res)=>{
+VarRoute.post('/categorie/Actualizar',(req,res)=>{
     CtrlActualizar.ControllerActualizar(req,res);
 }
 )
@@ -46,7 +46,7 @@ VarRoute.post('/employee/Actualizar',(req,res)=>{
 const CtrlListar = require("../controller/ListarController");
 
 
-VarRoute.post('/employee/Listar',(req,res)=>{
+VarRoute.post('/categorie/Listar',(req,res)=>{
     CtrlListar.ControllerListar(req,res);
 }
 )

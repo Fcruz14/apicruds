@@ -3,7 +3,7 @@ const sql = require("mssql");
 const varConfig = require("../../shared/config");
 
 
-async function QueryTodoListar(){
+async function QueryListar(id){
 
     objResponse = new Response();
 
@@ -12,7 +12,8 @@ async function QueryTodoListar(){
 
         const request = new sql.Request();
 
-        const result = await request.execute('GetAllEmployees');
+        request.input('id',sql.Int, id)
+        const result = await request.execute('GetCategoryByID');
 
  
             objResponse.code = 200;
@@ -21,7 +22,7 @@ async function QueryTodoListar(){
     }
     catch (error){
 
- 
+        console.log("error")
         objResponse.code = 400;
         objResponse.description = "error inesperado: "+error;
     }
@@ -33,5 +34,5 @@ async function QueryTodoListar(){
 
 
 module.exports = {
-    QueryTodoListar: QueryTodoListar
+    QueryListar: QueryListar
 };

@@ -1,8 +1,7 @@
 const ListarModel = require("../models/ListarModel");
 
-//************************OBTENER DATOS DEL EMPLEADO*****************************//
+//************************OBTENER UN REGISTRO*****************************//
 async function ControllerListar(req, res){
-    let result = null; // Cambiar de const a let
 
     try {
         const id = req.body.id; // Suponiendo que 'id' se pasa como un parámetro en la solicitud

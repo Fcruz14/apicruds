@@ -3,7 +3,7 @@ const sql = require("mssql");
 const varConfig = require("../../shared/config");
 
 
-async function QueryTodoListar(){
+async function QueryRegistrar(nombre,descripcion){
 
     objResponse = new Response();
 
@@ -12,12 +12,13 @@ async function QueryTodoListar(){
 
         const request = new sql.Request();
 
-        const result = await request.execute('GetAllEmployees');
+        request.input('nombre', sql.NVarChar, nombre);
+        request.input('descripcion', sql.NVarChar, descripcion);
+        const result = await request.execute('InsertCategory');
 
- 
             objResponse.code = 200;
             objResponse.description = "Excelente";
-            objResponse.data = result.recordset
+
     }
     catch (error){
 
@@ -33,5 +34,5 @@ async function QueryTodoListar(){
 
 
 module.exports = {
-    QueryTodoListar: QueryTodoListar
+    QueryRegistrar: QueryRegistrar
 };

@@ -1,11 +1,11 @@
 const EliminarModel = require("../models/EliminarModel");
 
-//*********************************************REGISTRAR PREINGRESOS********************************************/
+//*********************************************ELIMINAR REGISTRO********************************************/
 async function ControllerEliminar(req, res){
+
     let result;
     try{
         var {id} = req.body;
-
         result = await EliminarModel.QueryEliminar(id);
 
     }

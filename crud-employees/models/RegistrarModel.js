@@ -26,7 +26,7 @@ async function QueryRegistrar(nombre,apellido,ciudad,pais){
     catch (error){
 
  
-        objResponse.code = 200;
+        objResponse.code = 400;
         objResponse.description = "error inesperado: "+error;
     }
     await sql.close(); 

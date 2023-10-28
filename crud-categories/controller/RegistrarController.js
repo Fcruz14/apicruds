@@ -1,14 +1,12 @@
 const RegistrarModel = require("../models/RegistrarModel");
 
-//*********************************************REGISTRAR********************************************/
+//**************************REGISTRAR*******************************/
 async function ControllerRegistrar(req, res){
     let result = null; // Cambiar de const a let
 
-
     try{
-        var {nombre,apellido,ciudad,pais} = req.body;
-
-     result = await RegistrarModel.QueryRegistrar(nombre,apellido,ciudad,pais);
+        var {nombre,descripcion} = req.body;
+     result = await RegistrarModel.QueryRegistrar(nombre,descripcion);
 }
 
     catch (error) {

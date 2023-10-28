@@ -12,7 +12,7 @@ async function QueryTodoListar(){
 
         const request = new sql.Request();
 
-        const result = await request.execute('GetAllEmployees');
+        const result = await request.execute('GetAllCategories');
 
  
             objResponse.code = 200;
