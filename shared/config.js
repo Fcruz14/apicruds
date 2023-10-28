@@ -1,9 +1,9 @@
 
 //configuracion para la base de datos 
 const config = {
-    user: 'userApps',
-    password: 'bloqueta2023',
-    server: 'DESKTOP-0LDM0CI', //''
+    user: '',
+    password: '',
+    server: '', //''
     database: 'Northwind', // nombre de la base de datos
     options: {
         trustedconnection: true, // para la conexión local
