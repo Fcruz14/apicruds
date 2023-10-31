@@ -9,7 +9,7 @@ const config = {
         trustedconnection: true, // para la conexión local
         enableArithAbort: true,
         encrypt: false,
-        instancename: 'SQLEXPRESS19' // en caso se tenga alguna instancia
+        instancename: 'FRANK' // en caso se tenga alguna instancia
     }
 }
 module.exports = config; //exportamos la configuración
